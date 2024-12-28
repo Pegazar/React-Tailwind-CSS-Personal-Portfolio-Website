@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-poppins;
+}
+
+@layer utilities {
+  .container {
+    @apply mx-auto px-4 lg:px-8;
+    max-width: 1440px;
+  }
+
+  .nav-item {
+    @apply relative text-white transition-colors duration-300 ease-in-out hover:text-[#00EEFF];
+  }
+
+  .nav-item a {
+    @apply relative z-10;
+  }
+
+  .nav-item::after {
+    @apply absolute right-0 bottom-0 h-[2px] w-0 bg-[#00EEFF] transition-all duration-300 ease-in-out z-50;
+    content: "";
+  }
+
+  .nav-item:hover::after {
+    @apply left-0 w-full;
+  }
+
+  .social-icons {
+    @apply border-2 rounded-full text-xs p-1 cursor-pointer text-[#00EEFF] border-[#00EEFF] hover:text-white hover:border-white duration-200;
+  }
+
+}
